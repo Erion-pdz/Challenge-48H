@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const controllers = require("../controller/controller.js");
+const path = require('path');
 
-router.get("/accueil", controllers.getAccueil);
+// Route vers le mini-jeu RPG
+router.get('/rpg', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontEnd/templates/rpg.html'));
+});
 
 module.exports = router;
