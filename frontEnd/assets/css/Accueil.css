@@ -1,4 +1,114 @@
+@font-face {
+    font-family: 'Super Cottage';
+    src: url('../font/Super Cottage.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Super Cottage', sans-serif;
 }
+
+body {
+    overflow: hidden;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+h2 {
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.carrousel > img {
+    z-index: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+h1 {
+    z-index: 1;
+}
+
+.support {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.island-top {
+    width: 20%;
+    display: flex;
+    align-items: start;
+    cursor: auto;
+}
+
+.island-bot {
+    width: 20%;
+    display: flex;
+    align-items: end;
+    cursor:auto;
+}
+
+.island-top > img, .island-bot> img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.coffre {
+    width: 30%;
+    cursor: auto;
+}
+
+.coffre > img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.start {
+    z-index: 1;
+    margin-top: 5%;
+    padding: 15px;
+    background-color: gold;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+.island-bot>img:hover, .island-top>img:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.start:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.coffre>img:hover {
+    transform: scale(1.1,1.1);
+}
+
+
+
+
+
+
+
