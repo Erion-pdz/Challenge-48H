@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Escape Game - RTS Tower Defense</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      padding: 20px;
+    }
+    canvas {
+      background-color: #000;
+      display: block;
+      margin: 20px 0;
+      border: 2px solid #0ff;
+    }
+    .cards {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .card {
+      width: 100px;
+      padding: 10px;
+      text-align: center;
+      background-color: #222;
+      border: 2px solid #fff;
+      cursor: pointer;
+    }
+    .card.selected {
+      border-color: #0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎯 Mini-jeu Tower Defense - Style PvZ</h1>
+  <p>💙 Ressources : <span id="resources">0</span> |
+     ❤️ Vies : <span id="lives">3</span> |
+     🌊 Vague : <span id="wave">1 / 5</span></p>
+
+  <div class="cards">
+    <div class="card" data-type="shooter">Tireur (10)</div>
+    <div class="card" data-type="generator">Générateur (15)</div>
+    <div class="card" data-type="multi">Multi-ligne (20)</div>
+  </div>
+
+  <canvas id="towerDefense" width="600" height="300"></canvas>
+
+  <!-- Chargement du script JS externe -->
+  <script src="../assets/js/game.js"></script>
+</body>
+</html>
