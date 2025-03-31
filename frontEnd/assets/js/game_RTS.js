@@ -19,7 +19,7 @@ function initGame() {
   const TILE_SIZE = 60;
   const GRID_ROWS = 5;
   const GRID_COLS = 10;
-  const UNIT_COST = { shooter: 10, generator: 15, multi: 20 };
+  const UNIT_COST = { shooter: 10, generator: 15, multi: 40 };
   const PROJECTILE_SPEED = 4;
   const GENERATOR_DURATION = 15000;
   const GENERATOR_INCOME = 3;
