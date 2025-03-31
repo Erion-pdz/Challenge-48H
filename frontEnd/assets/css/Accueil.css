@@ -13,16 +13,7 @@ body {
     overflow: hidden;
 }
 
-header {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
 
-h2 {
-    color: white;
-}
 
 main {
     display: flex;

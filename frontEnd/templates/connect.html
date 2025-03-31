@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../assets/css/Connect.css">
+        <link rel="stylesheet" href="../assets/css/header.css">
+    </head>
+    <body>
+        <header>
+            <h2>Challenge 48h - Le coffre à 4 clés</h2>
+            <a href="../templates/connect.html">Se connecter</a>
+        </header>
+
+        <div class="container">
+            <div class="login-container">
+                <h1 class="login-title">Se connecter</h1>
+                <form class="login-form" action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="pseudo">Pseudo : </label>
+                        <input type="text" id="pseudo" name="pseudo" placeholder="pseudo...." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe :</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="login-button">Se connecter</button>
+                </form>
+                <button class="switch-to-register" onclick="toggleForm()">Créer compte</button>
+            </div>
+            <div class="register-container">
+                <h2 class="register-title">Créer compte</h2>
+                <form class="register-form" action="/register" method="POST">
+                    <div class="form-group">
+                        <label for="register-pseudo">Pseudo : </label>
+                        <input type="text" id="register-pseudo" name="pseudo" placeholder="pseudo...." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Mot de passe : </label>
+                        <input type="password" id="register-password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="register-button">Créer compte</button>
+                </form>
+                <button class="switch-to-login" onclick="toggleForm()">Se connecter</button>
+            </div>
+        </div>
+        
+        <script src="../assets/JS/Connect.js" async defer></script>
+    </body>
+</html>
