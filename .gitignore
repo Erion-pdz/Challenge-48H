@@ -134,3 +134,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+# backend/.gitignore
+serviceAccountKey.json
+challenge48h-70447-firebase-adminsdk-fbsvc-dc92ead628.json

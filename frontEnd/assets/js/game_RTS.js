@@ -165,6 +165,18 @@ function initGame() {
       screen.style.display = "flex";
       clearInterval(gameLoopInterval);
       clearInterval(towerCleanupInterval);
+
+      const pseudo = document.getElementById("pseudo-joueur")?.value || "inconnu";
+      fetch("/rts-cle", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ pseudo })
+      })
+      .then(res => res.text())
+      .then(msg => console.log("🔥 Réponse du serveur :", msg))
+      .catch(err => console.error("Erreur enregistrement clé :", err));
     }
   }
 

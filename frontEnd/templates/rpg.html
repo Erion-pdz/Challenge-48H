@@ -15,9 +15,20 @@
   <main>
     <h1>- RPG -</h1>
     <h1>Choisis ta classe</h1>
-    <div id="classSelection">
-      <button onclick="selectClass('mage')">🧙 Mage</button>
-      <button onclick="selectClass('warrior')">🛡️ Guerrier</button>
+    <button onclick="selectClass('mage')">🧙 Mage</button>
+    <button onclick="selectClass('warrior')">🛡️ Guerrier</button>
+  </div>
+  <input type="hidden" id="pseudo-joueur" value="alex" />
+
+  <canvas id="gameCanvas" width="640" height="480"></canvas>
+
+  <!-- Interface visible après sélection -->
+  <div id="interface" style="display: none;">
+
+    <!-- HUD en haut à gauche -->
+    <div id="hud-top-left" class="hud-box" style="display: none; position: absolute; top: 10px; left: 10px;">
+      <p>❤️ PV : <span id="playerHP">100 / 100</span></p>
+      <p>🔷 Mana : <span id="playerMana">100 / 100</span></p>
     </div>
     
     <div class="stat" style="display: none;">
