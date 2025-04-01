@@ -9,6 +9,7 @@
 <body>
   <header>
     <a href="/accueil" class="titre">Challenge 48h - Le coffre à 4 clés</a>
+    <p class="timer">00:00</p>
     <a href="/connect">Se connecter</a>
   </header>
   <main>
@@ -53,7 +54,7 @@
       z-index: 1000;
     ">
       <h1>🕹️ Prêt à défendre ton île ?</h1>
-      <button onclick="startMiniGame()" style="
+      <button class="start" onclick="startMiniGame()" style="
         margin-top: 20px;
         font-size: 24px;
         padding: 12px 30px;
@@ -86,6 +87,6 @@
     </div>
     </div>
   </main>
-  
+  <script src="/assets/js/timer.js"></script>
 </body>
 </html>
