@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Mini-jeu FPS</title>
+    <link rel="stylesheet" href="/assets/css/fps.css" />
+</head>
+<body>
+    <div id="startScreen" class="middle">
+        <button class="difficulty" onclick="startMiniGame(1)">My Little Poney</button>
+        <button class="difficulty" onclick="startMiniGame(2)">Normie</button>
+        <button class="difficulty" onclick="startMiniGame(3)">Death Watch</button>
+    </div>
+
+    <p class="KillCount" id="KC"> Kills: 0/10 </p>
+    <p class="HP" id="HP"> HP: 100/100 </p>
+    <p class="Ammo" id="Ammo"> Ammo: 10/10 </p>
+    <p class="reloading" id="reload" style="
+    color: lime;
+    display: none;
+    ">
+        reloading
+    </p>
+    <canvas id="fps" width="600" height="300"></canvas>
+
+    <div id="defeatScreen" style="display: none" class="middle">
+        <p class="defeat"> Vous avez perdu </p>
+        <button class="difficulty" onclick="location.reload()">Réessayer</button>
+    </div>
+
+    <div id="victoryScreen" style="display: none" class="middle">
+        <p class="victoire"> Vous avez gagné ! </p>
+        <button class="difficulty" onclick="window.location.href='/accueil'">
+            Retour à l'accueil
+        </button>
+
+    </div>
+
+    <button class="accueil" onclick="window.location.href='/accueil'">
+        Retour à l'accueil
+    </button>
+
+    <!-- JS principal -->
+    <script src="/assets/js/fps.js"></script>
+</body>
