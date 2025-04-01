@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <title>Mini-jeu RPG</title>
+  <link rel="stylesheet" href="/assets/css/header.css">
   <link rel="stylesheet" href="/assets/css/rpg.css" />
 </head>
 <body>
-  <div id="classSelection">
+  <header>
+    <a href="/accueil" class="titre">Challenge 48h - Le coffre à 4 clés</a>
+    <a href="/connect">Se connecter</a>
+  </header>
+  <main>
+    <h1>- RPG -</h1>
     <h1>Choisis ta classe</h1>
     <button onclick="selectClass('mage')">🧙 Mage</button>
     <button onclick="selectClass('warrior')">🛡️ Guerrier</button>
   </div>
-  <input type="hidden" id="pseudo-joueur" value="alex" />
+  <input type="hidden" id="pseudo-joueur" value="" />
 
   <canvas id="gameCanvas" width="640" height="480"></canvas>
 
@@ -36,22 +42,33 @@
         <button id="skill2">2</button>
         <button id="skill3">3</button>
       </div>
-
-      <div id="victoryScreen" style="
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.9);
-      color: white;
-      font-size: 36px;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      z-index: 9999;
-    ">
-      <h1>🏆 Victoire !</h1>
-      <p>🗝️ Tu as trouvé une clé contenant le chiffre : <strong style="font-size: 48px; color: #0f0;">9</strong></p>
-      <button onclick="window.location.href='Accueil.html'" style="
+      <canvas id="gameCanvas" width="640" height="480"></canvas>
+    </div>
+  
+    <!-- Interface visible après sélection -->
+    <div id="interface" style="display: none;">
+  
+      <!-- HUD en haut à gauche -->
+      
+  
+      <!-- Barre de compétences en bas -->
+    
+  
+        <div id="victoryScreen" style="
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+        font-size: 36px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 9999;
+      ">
+        <h1>🏆 Victoire !</h1>
+        <p>🗝️ Tu as trouvé une clé contenant le chiffre : <strong style="font-size: 48px; color: #0f0;">9</strong></p>
+        <button id="continueBtn" style="
         margin-top: 20px;
         font-size: 24px;
         padding: 10px 30px;
@@ -61,12 +78,34 @@
         border-radius: 8px;
         cursor: pointer;
       ">
-        Retour à l'accueil
+        Continuer
       </button>
-    </div>
+      
+      </div>
+  </main>
     
 
   <!-- JS principal -->
   <script src="/assets/js/rpg.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const pseudo = params.get("pseudo");
+    if (pseudo) {
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("pseudo-joueur").value = pseudo;
+      });
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+    const pseudo = document.getElementById("pseudo-joueur").value;
+
+    const btn = document.getElementById("continueBtn");
+    if (btn && pseudo) {
+      btn.addEventListener("click", () => {
+        window.location.href = `/rpg?pseudo=${pseudo}`;
+      });
+    }
+  });
+  </script>
+  
 </body>
 </html>

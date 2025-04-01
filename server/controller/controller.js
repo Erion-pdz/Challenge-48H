@@ -48,6 +48,9 @@ exports.postRPG= async (req, res) => {
 
 
 exports.getRTS = async (req, res) => {
+    if (!pseudo) {
+        return res.redirect("/connect"); 
+    }
     res.sendFile(path.join(__dirname, '../../frontEnd/templates/rts.html'));
 };
 exports.postRTS = async (req, res) => {
