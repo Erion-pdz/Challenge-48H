@@ -31,13 +31,39 @@
 
     <!-- Barre de compétences en bas -->
     <div id="skillBar" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: none;">
-        <button onclick="useSkill(1)">1 - 🔥 Boule de feu</button>
-        <button onclick="useSkill(2)">2 - 💖 Soin</button>
-        <button onclick="useSkill(3)">3 - 🛡️ Armure magique</button>
+        <button id="skill1">1</button>
+        <button id="skill2">2</button>
+        <button id="skill3">3</button>
       </div>
-      
 
-  </div>
+      <div id="victoryScreen" style="
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      font-size: 36px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 9999;
+    ">
+      <h1>🏆 Victoire !</h1>
+      <p>🗝️ Tu as trouvé une clé contenant le chiffre : <strong style="font-size: 48px; color: #0f0;">9</strong></p>
+      <button onclick="window.location.href='Accueil.html'" style="
+        margin-top: 20px;
+        font-size: 24px;
+        padding: 10px 30px;
+        background: #0f0;
+        color: #000;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      ">
+        Retour à l'accueil
+      </button>
+    </div>
+    
 
   <!-- JS principal -->
   <script src="/assets/js/rpg.js"></script>
