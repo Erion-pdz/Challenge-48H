@@ -24,3 +24,8 @@ exports.getChest = async (req, res) => {
 
     res.sendFile(path.join(__dirname, '../../frontEnd/templates/chest.html'));
 }
+
+exports.getFPS = async (req, res) =>{
+    
+    res.sendFile(path.join(__dirname, '../../frontEnd/templates/fps.html'));
+}

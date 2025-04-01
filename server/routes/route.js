@@ -8,6 +8,7 @@ router.get("/connect", controllers.getConnect); // Route vers la page de connexi
 router.get("/rts", controllers.getRTS); // Route vers le mini-jeu RTS
 router.get('/rpg', controllers.getRPG); // Route vers le mini-jeu RPG
 router.get("/chest", controllers.getChest); // Route vers la page du coffre
+router.get("/fps", controllers.getFPS);
 
 
 module.exports = router;
