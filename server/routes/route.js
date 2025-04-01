@@ -7,6 +7,7 @@ router.get("/accueil", controllers.getAccueil); // Route vers la page Accueil
 router.get("/connect", controllers.getConnect); // Route vers la page de connexion ou de création de compte
 router.get("/rts", controllers.getRTS); // Route vers le mini-jeu RTS
 router.get('/rpg', controllers.getRPG); // Route vers le mini-jeu RPG
+router.get("/chest", controllers.getChest); // Route vers la page du coffre
 
 
 module.exports = router;

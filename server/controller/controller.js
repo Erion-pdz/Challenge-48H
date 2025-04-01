@@ -19,3 +19,8 @@ exports.getConnect = async (req, res) => {
 
     res.sendFile(path.join(__dirname, '../../frontEnd/templates/Connect.html'));
 }
+
+exports.getChest = async (req, res) => {
+
+    res.sendFile(path.join(__dirname, '../../frontEnd/templates/chest.html'));
+}
