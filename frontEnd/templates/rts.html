@@ -14,6 +14,8 @@
   </header>
   <main>
       <h1>- RTS -</h1>
+      <input type="hidden" id="pseudo-joueur" value="alex">
+
       <h1>🎯 Mini-jeu Tower Defense !</h1>
       <p>
         💙 Ressources : <span id="resources">0</span> |
@@ -81,12 +83,44 @@
       justify-content: center;
       z-index: 9999;
     ">
-      🏆 Victoire !
-    
-      
+      <h1>🏆 Victoire !</h1>
+      <p>🗝️ Tu as trouvé une clé contenant le chiffre : 
+        <strong style="font-size: 48px; color: #0f0;">9</strong>
+      </p>
+      <button id="continueBtn" style="
+        margin-top: 20px;
+        font-size: 24px;
+        padding: 10px 30px;
+        background: #0f0;
+        color: #000;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      ">
+        Continuer
+      </button>
+  
     </div>
     </div>
   </main>
-  <script src="/assets/js/timer.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const pseudo = params.get("pseudo");
+  
+      if (pseudo) {
+        const input = document.getElementById("pseudo-joueur");
+        if (input) input.value = pseudo;
+      }
+      const btn = document.getElementById("continueBtn");
+      if (btn && pseudo) {
+        btn.addEventListener("click", () => {
+          window.location.href = `/rpg?pseudo=${pseudo}`;
+        });
+      }
+      console.log("✅ Pseudo injecté :", pseudo);
+    });
+  </script>
+  
 </body>
 </html>

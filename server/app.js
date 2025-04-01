@@ -3,9 +3,6 @@ const path = require('path');
 const app = express();
 const routes = require('./routes/route.js');
 
-// Middleware pour parser le corps des requêtes (formulaires)
-app.use(express.urlencoded({ extended: true })); 
-app.use(express.json()); 
 // Sert les fichiers statiques (css, js, images)
 app.use("/assets", express.static(path.join(__dirname, "../frontEnd/assets")));
 
