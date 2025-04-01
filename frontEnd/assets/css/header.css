@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 @font-face {
     font-family: 'Super Cottage';
     src: url('../font/Super Cottage.ttf') format('truetype');
@@ -11,18 +9,14 @@
     font-family: 'Super Cottage', sans-serif;
 }
 
->>>>>>> d049f5e2fea3c26a53af7cfd1892168f0d088619
 header {
     background-color: black;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-<<<<<<< HEAD
     padding: 10px;
-=======
     padding-top: 1%;
     padding-bottom: 1%;
->>>>>>> d049f5e2fea3c26a53af7cfd1892168f0d088619
     width: 100%;
 }
 
