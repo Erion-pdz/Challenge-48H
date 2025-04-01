@@ -1,14 +1,38 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #222;
+  background: url("/assets/img/background.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
   color: white;
-  font-family: Arial, sans-serif;
   text-align: center;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  gap: 1%;
+}
+
 #classSelection {
-  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 1%;
+  width: 60%;
+}
+
+#classSelection > button {
+  width: 15%;
+  font-size: 1.4em;
+}
+
+.stat {
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
 }
 
 canvas {
@@ -28,36 +52,38 @@ canvas {
 }
 
 .skills button {
-  margin: 5px;
+  margin: 5px;    
   padding: 8px 16px;
   font-size: 16px;
   cursor: pointer;
 }
 .hud-box {
-  position: absolute;
+  position: static;
   background-color: #222;
   color: white;
   padding: 10px;
   border-radius: 8px;
-  font-family: Arial, sans-serif;
+  flex-wrap: wrap;
 }
 
-#hud-top-left {
-  top: 10px;
-  left: 10px;
+.support {
+  display: flex;
+  justify-content: center;
 }
 
-#hud-top-right {
-  top: 10px;
-  right: 10px;
+#skillbar {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
+
 #skillBar button {
   font-size: 16px;
   padding: 10px 15px;
   margin: 0 5px;
   border-radius: 6px;
   border: none;
-  background-color: #333;
+  background-color: rgb(51, 51, 51, 0.6);
   color: white;
   cursor: pointer;
 }

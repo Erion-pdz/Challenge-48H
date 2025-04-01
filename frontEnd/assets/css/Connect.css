@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
     font-family: 'Super Cottage';
     src: url('../font/Super Cottage.ttf') format('truetype');
@@ -8,6 +9,8 @@
     padding: 0;
     font-family: 'Super Cottage', sans-serif;
 }
+=======
+>>>>>>> d049f5e2fea3c26a53af7cfd1892168f0d088619
 
 body {
     background: url("../img/background.png") no-repeat;

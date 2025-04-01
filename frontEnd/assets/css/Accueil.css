@@ -1,26 +1,21 @@
-@font-face {
-    font-family: 'Super Cottage';
-    src: url('../font/Super Cottage.ttf') format('truetype');
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Super Cottage', sans-serif;
-}
-
 body {
     overflow: hidden;
+    background: url("/assets/img/background.png") no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d049f5e2fea3c26a53af7cfd1892168f0d088619
 
 main {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
+    margin-top: 5%;
 }
 
 .carrousel > img {

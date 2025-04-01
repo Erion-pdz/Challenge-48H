@@ -61,11 +61,17 @@ function selectClass(cls) {
     console.log("✅ Sprite ennemi chargé !");
     enemies.forEach(e => e.sprite = enemyImg);
   };
-
+  document.querySelector(".stat").style.display = "flex";
   document.getElementById("interface").style.display = "block";
-  document.getElementById("hud-top-left").style.display = "block";
-  document.getElementById("hud-top-right").style.display = "block";
+  document.getElementById("hud-top-left").style.display = "flex";
+  document.getElementById("hud-top-left").style.position = "static";
+  document.getElementById("hud-top-right").style.display = "flex";
+  document.getElementById("hud-top-right").style.position = "static";
   document.getElementById("skillBar").style.display = "flex";
+  document.getElementById("skillBar").style.flexDirection = "column";
+  document.getElementById("skillBar").style.justifyContent = "center";
+  document.getElementById("skillBar").style.gap = "2%";
+  document.getElementById("skillBar").style.alignItems = "start";
 
   if (cls === "mage") {
     player.maxHp = 80; player.hp = 80;

@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <title>Mini-jeu RPG</title>
+  <link rel="stylesheet" href="/assets/css/header.css">
   <link rel="stylesheet" href="/assets/css/rpg.css" />
 </head>
 <body>
-  <div id="classSelection">
+  <header>
+    <a href="/accueil" class="titre">Challenge 48h - Le coffre à 4 clés</a>
+    <a href="/connect">Se connecter</a>
+  </header>
+  <main>
+    <h1>- RPG -</h1>
     <h1>Choisis ta classe</h1>
     <button onclick="selectClass('mage')">🧙 Mage</button>
     <button onclick="selectClass('warrior')">🛡️ Guerrier</button>
@@ -23,47 +29,65 @@
       <p>❤️ PV : <span id="playerHP">100 / 100</span></p>
       <p>🔷 Mana : <span id="playerMana">100 / 100</span></p>
     </div>
-
-    <!-- HUD en haut à droite -->
-    <div id="hud-top-right" class="hud-box" style="display: none; position: absolute; top: 10px; right: 10px;">
-      <p>⚔️ Attaque : <span id="playerAttack">10</span></p>
-      <p>🛡️ Défense : <span id="playerDefense">5</span></p>
+    
+    <div class="stat" style="display: none;">
+      <div id="hud-top-left" class="hud-box" style="display: none; position: absolute; top: 10px; left: 10px;">
+        <p>❤️ PV : <span id="playerHP">100 / 100</span></p>
+        <p>🔷 Mana : <span id="playerMana">100 / 100</span></p>
+      </div>
+  
+      <!-- HUD en haut à droite -->
+      <div id="hud-top-right" class="hud-box" style="display: none; position: absolute; top: 10px; right: 10px;">
+        <p>⚔️ Attaque : <span id="playerAttack">10</span></p>
+        <p>🛡️ Défense : <span id="playerDefense">5</span></p>
+      </div>
     </div>
-
-    <!-- Barre de compétences en bas -->
-    <div id="skillBar" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: none;">
+    <div class="support">
+      <div id="skillBar" style="display: none;">
         <button id="skill1">1</button>
         <button id="skill2">2</button>
         <button id="skill3">3</button>
       </div>
-
-      <div id="victoryScreen" style="
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.9);
-      color: white;
-      font-size: 36px;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      z-index: 9999;
-    ">
-      <h1>🏆 Victoire !</h1>
-      <p>🗝️ Tu as trouvé une clé contenant le chiffre : <strong style="font-size: 48px; color: #0f0;">9</strong></p>
-      <button onclick="window.location.href='Accueil.html'" style="
-        margin-top: 20px;
-        font-size: 24px;
-        padding: 10px 30px;
-        background: #0f0;
-        color: #000;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-      ">
-        Retour à l'accueil
-      </button>
+      <canvas id="gameCanvas" width="640" height="480"></canvas>
     </div>
+  
+    <!-- Interface visible après sélection -->
+    <div id="interface" style="display: none;">
+  
+      <!-- HUD en haut à gauche -->
+      
+  
+      <!-- Barre de compétences en bas -->
+    
+  
+        <div id="victoryScreen" style="
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+        font-size: 36px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 9999;
+      ">
+        <h1>🏆 Victoire !</h1>
+        <p>🗝️ Tu as trouvé une clé contenant le chiffre : <strong style="font-size: 48px; color: #0f0;">9</strong></p>
+        <button onclick="window.location.href='Accueil.html'" style="
+          margin-top: 20px;
+          font-size: 24px;
+          padding: 10px 30px;
+          background: #0f0;
+          color: #000;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+        ">
+          Retour à l'accueil
+        </button>
+      </div>
+  </main>
     
 
   <!-- JS principal -->
