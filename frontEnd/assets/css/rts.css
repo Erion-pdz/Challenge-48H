@@ -53,3 +53,16 @@ canvas {
 .card.selected {
     border-color: #0f0;
 }
+
+.continue {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #0f0;
+    color: #000;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.continue {
+    transform: scale(1.2, 1.2);
+}
