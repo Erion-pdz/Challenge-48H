@@ -244,6 +244,15 @@ function draw() {
 function gameLoop() {
   if (gameStarted && enemies.length === 0) {
     document.getElementById("victoryScreen").style.display = "flex";
+    const pseudo = document.getElementById("pseudo-joueur")?.value || "inconnu";
+    fetch("/rpg-cle", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ pseudo })
+    })
+    .then(res => res.text())
+    .then(msg => console.log("✅ Clé RPG enregistrée :", msg))
+    .catch(err => console.error("❌ Erreur clé RPG :", err));
     return;
   }
 
